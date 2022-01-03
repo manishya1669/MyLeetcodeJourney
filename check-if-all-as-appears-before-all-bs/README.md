@@ -1,3 +1,4 @@
+[Discussion Post (created on 3/0/2022 at 9:10)](https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/discuss/1663416/Easy-approach-in-c%2B%2B)  
 <h2>2124. Check if All A's Appears Before All B's</h2><h3>Easy</h3><hr><div><p>Given a string <code>s</code> consisting of <strong>only</strong> the characters <code>'a'</code> and <code>'b'</code>, return <code>true</code> <em>if <strong>every</strong> </em><code>'a'</code> <em>appears before <strong>every</strong> </em><code>'b'</code><em> in the string</em>. Otherwise, return <code>false</code>.</p>
 
 <p>&nbsp;</p>
