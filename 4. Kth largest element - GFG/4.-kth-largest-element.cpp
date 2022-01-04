@@ -22,8 +22,8 @@ class Solution
            v.push_back(minh.top());
            minh.pop();
        }
-       sort(v.begin(),v.end(),greater<int>());
-       return v[k-1];
+      // sort(v.begin(),v.end(),greater<int>());
+       return v[v.size()-k];
     }
 };
 
