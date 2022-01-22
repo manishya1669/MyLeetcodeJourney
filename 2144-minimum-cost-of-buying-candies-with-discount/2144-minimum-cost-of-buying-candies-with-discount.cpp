@@ -4,7 +4,7 @@ public:
         
        
         int n = cost.size();
-       sort(cost.begin(),cost.end(),greater<int>());
+       sort(cost.rbegin(),cost.rend());
         int res = 0;
         int count = 0;
         for(int i =0;i<n;i++){
