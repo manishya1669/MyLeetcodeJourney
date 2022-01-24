@@ -6,17 +6,13 @@ public:
         int l = 0;
             int count =0;
         if(isupper(word[0]) ){
-           
-                
             for(int i =1;i<n;i++){
                 if(isupper(word[i]))
                     count++;
                 
               else if(islower(word[i]))
-                  c++;
-              
-            }
-           
+                  c++;              
+            }           
         }
       else  if(islower(word[0])){
           for(int i =1;i<n;i++){
