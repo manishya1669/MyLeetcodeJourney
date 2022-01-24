@@ -117,7 +117,6 @@ struct MinHeapNode
 */
 
 
-//Function to return the decoded string.
 string decodeHuffmanData(struct MinHeapNode* root, string binaryString)
 {
     string ans = "";
