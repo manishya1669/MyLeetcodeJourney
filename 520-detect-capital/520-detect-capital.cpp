@@ -9,12 +9,12 @@ public:
            
                 
             for(int i =1;i<n;i++){
-                if(isupper(word[i])){
+                if(isupper(word[i]))
                     count++;
-                }
-              else if(islower(word[i])){
+                
+              else if(islower(word[i]))
                   c++;
-              }
+              
             }
            
         }
