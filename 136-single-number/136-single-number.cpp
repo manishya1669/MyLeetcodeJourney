@@ -1,13 +1,13 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        map<int,int>umap;
+       unordered_map<int,int>umap;
         for(auto i:nums){
             umap[i]++;
         }
-        for(auto m:umap){
-            if(m.second ==1)
-                return m.first;
+        for(auto it:umap){
+            if(it.second ==1)
+                return it.first;
         }
         return 0;
     }
