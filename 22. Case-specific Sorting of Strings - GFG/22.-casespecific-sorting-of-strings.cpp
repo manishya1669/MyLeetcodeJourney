@@ -13,34 +13,34 @@ class Solution
     string caseSort(string str, int n)
     {
         
-        // string upper;
-        // string lower;
+        string upper;
+        string lower;
         
-        // for(int i =0;i<n;i++){
-        //     if(isupper(str[i]))
-        //          {upper.push_back(str[i]);}
+        for(int i =0;i<n;i++){
+            if(isupper(str[i]))
+                 {upper.push_back(str[i]);}
             
-        //     else
-        //       { lower.push_back(str[i]);}
-        // }
+            else
+              { lower.push_back(str[i]);}
+        }
         
-        // sort(upper.begin(),upper.end());
-        // sort(lower.begin(),lower.end());
+        sort(upper.begin(),upper.end());
+        sort(lower.begin(),lower.end());
         
-        // int i=0;
-        // int j =0;
-        // string res;
-        // for(int i=0;i<n;i++){
-        //     if(isupper(str[i]))
-        //       {res.push_back(upper[i]);
-        //       i++;}
+        int k=0;
+        int j =0;        
+        string res;
+        for(int i=0;i<n;i++){
+            if(isupper(str[i]))
+              {res.push_back(upper[k]);
+              k++;}
                
-        //     else
-        //       {res.push_back(lower[j]);
-        //       j++;}
-        // }
+            else
+              {res.push_back(lower[j]);
+              j++;}
+        }
         
-        // return res;
+        return res;
         
         
         
@@ -71,38 +71,38 @@ class Solution
         
         
         // your code here
-        string upper;
-        string lower;
+        // string upper;
+        // string lower;
         
-        for(int i = 0;i<n;i++){
+        // for(int i = 0;i<n;i++){
             
-            if(isupper(str[i])){
-                upper.push_back(str[i]);
-            }
-            else{
-                 lower.push_back(str[i]);
-            }
+        //     if(isupper(str[i])){
+        //         upper.push_back(str[i]);
+        //     }
+        //     else{
+        //          lower.push_back(str[i]);
+        //     }
            
-        }
-        sort(upper.begin(),upper.end());
-        sort(lower.begin(),lower.end());
+        // }
+        // sort(upper.begin(),upper.end());
+        // sort(lower.begin(),lower.end());
         
-        int j  =0;
-        int k =0;
-        string res;
+        // int j  =0;
+        // int k =0;
+        // string res;
         
-        for(int i =0;i<n;i++){
+        // for(int i =0;i<n;i++){
             
-            if(isupper(str[i])){
-                res.push_back(upper[j]);
-                j++;
-            }
-            else{
-                res.push_back(lower[k]);
-                k++;
-            }
-        }
-        return res;
+        //     if(isupper(str[i])){
+        //         res.push_back(upper[j]);
+        //         j++;
+        //     }
+        //     else{
+        //         res.push_back(lower[k]);
+        //         k++;
+        //     }
+        // }
+        // return res;
     }
 };
 
