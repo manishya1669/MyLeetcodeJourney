@@ -70,9 +70,9 @@ Node* insertInMiddle(Node* head, int x)
 {
     Node * temp = new Node(x);
     Node * slow = head;
-    Node * fast = head ->next;
+    Node * fast = head->next;
     
-    while(fast and fast->next){
+    while(fast and fast->next  != NULL){
         slow = slow->next;
         fast = fast->next->next;
         
