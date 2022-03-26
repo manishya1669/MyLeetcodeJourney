@@ -32,7 +32,7 @@ class Solution
     
    int count =1;
         Node * curr = head;
-        while(curr->next != 0){
+        while(curr->next != NULL){
             curr = curr->next;
             count++;
         }
