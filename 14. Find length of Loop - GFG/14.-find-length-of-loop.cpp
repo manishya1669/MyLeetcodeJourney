@@ -75,33 +75,24 @@ struct Node {
 //Function to find the length of a loop in the linked list.
 int countNodesinLoop(struct Node *head)
 {
-    // Code here
-  Node* fast = head->next;
+
+    Node* fast = head->next;
     Node* slow = head;
-    
     while( fast!=slow )
     {
-        //if the node pointed by first pointer(fast) or the node 
-        //next to it is null, then loop is not present so we return 0.
         if( fast==NULL || fast->next==NULL ) 
         return 0;
-        
         fast = fast->next->next;
         slow = slow->next;
     }
-    //both pointers now point to the same node in the loop.
     
     int size = 1;
     fast = fast->next;
-    
-    //we start iterating the loop with first pointer and continue till 
-    //both pointers point to same node again.
+
     while( fast!=slow )
     {
         fast = fast->next;
-        //incrementing the counter.
         size++;
     }
-    //returning the length of the loop.
     return size;
 }
