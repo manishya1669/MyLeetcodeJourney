@@ -3,15 +3,17 @@ public:
     int findDuplicate(vector<int>& nums) {
         std::ios::sync_with_stdio(false);
         std::cin.tie(nullptr);
+        
         unordered_map<int,int>umap;
-        for(int i=0;i<nums.size();i++){
-            umap[nums[i]]++;
+        for(auto x:nums){
+            umap[x]++;
         }
-        for(auto it:umap){
-            if(it.second>=2)
-                return it.first;
+        for(auto x:umap){
+            if(x.second>=2)
+                return x.first;
         }
         return 0;
     }
   
 };
+ 
