@@ -16,7 +16,7 @@ class Solution
     {
        if(count== size/2){
            s.pop();
-           return;
+        //   return;
        }else{
            int x = s.top();
            s.pop();
