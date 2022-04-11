@@ -26,7 +26,7 @@ public:
             }
                             
             grid1[0][0]=grid[n-1][m-1];
-            grid=grid1;
+             grid = grid1;
         }
         return grid1;
     }
