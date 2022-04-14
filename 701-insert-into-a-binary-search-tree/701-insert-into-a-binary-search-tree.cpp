@@ -12,7 +12,7 @@
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
-        
+     
         TreeNode * m= new TreeNode(val);
         if(root ==NULL)return m;
         
