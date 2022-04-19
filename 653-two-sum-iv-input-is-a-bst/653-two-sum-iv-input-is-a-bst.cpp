@@ -12,7 +12,7 @@
 class Solution {
 public:
   
-    void inorder(TreeNode * root,map<int,int>&umap ,int k,int &count){
+    void inorder(TreeNode * root,unordered_map<int,int>&umap ,int k,int &count){
         if(root==NULL)return;
         inorder(root->left,umap,k,count);
         if(umap.find(k-(root->val)) != umap.end()){
@@ -23,7 +23,7 @@ public:
     }
     bool findTarget(TreeNode* root, int k) {
        
-         map<int,int>umap;
+        unordered_map<int,int>umap;
         int count =0;
         inorder(root,umap,k,count);
         
