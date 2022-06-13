@@ -10,7 +10,7 @@ public:
 
         return lcs(text1,text2,n,m,dp);
     }
-      int lcs(string &t1,string &t2, int n, int m ,int dp[][1001]){
+      int lcs(string &t1,string &t2, int n, int m ,int dp[1001][1001]){
        if(n==0 || m==0){
            return 0;
        }
