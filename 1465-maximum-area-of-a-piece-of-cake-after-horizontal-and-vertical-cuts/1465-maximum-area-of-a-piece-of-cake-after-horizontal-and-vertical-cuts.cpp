@@ -1,19 +1,25 @@
-const int MOD = 1e9 + 7;
 class Solution {
 public:
-   int getMaxDiff(vector<int>& v, int len) {
-        sort(v.begin(), v.end());
-        int max_diff = v[0];
+    int maxi(vector<int>&v, int length){
+      
+        int n = v.size();
+        sort(v.begin(),v.end());
+          int maximum = v[0];
+        for(int i =1;i<n;i++){
+            maximum = max(maximum,v[i]-v[i-1]);
+        }
+        maximum = max(maximum, length - v.back());
         
-        for (int i = 1; i < v.size(); i++)
-            max_diff = max(max_diff, v[i]-v[i-1]);
-        
-        max_diff = max(max_diff, len - v.back());
-        return max_diff;
+        return maximum;
     }
-    
     int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
-        return (long)getMaxDiff(horizontalCuts, h) * getMaxDiff(verticalCuts, w) % 1000000007;
-    
+        int mod = 1e9 +7;
+        long long ans = (long)maxi(horizontalCuts,h)% 1000000007;
+       //  cout<<"ans:"<<ans;
+        long long ma = (long)maxi(verticalCuts,w)% 1000000007;
+      //  cout<<"ma"<<ma;
+        
+        return ans * ma%1000000007;
+        
     }
 };
