@@ -3,6 +3,7 @@ public:
     int longestConsecutive(vector<int>& nums) {
         priority_queue<int>p;
         int n = nums.size();
+    
         if(n <= 1)  return n;
         for(int i = 0; i < n; i++) p.push(nums[i]); 
         int current = p.top(), longest = 0, count = 0;
