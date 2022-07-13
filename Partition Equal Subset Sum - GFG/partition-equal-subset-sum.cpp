@@ -11,6 +11,28 @@ class Solution{
 public:
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     int equalPartition(int n, int arr[])
     {
         int sum=0;
