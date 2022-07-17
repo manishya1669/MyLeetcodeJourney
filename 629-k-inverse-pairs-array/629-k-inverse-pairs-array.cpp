@@ -11,5 +11,6 @@ public:
                     if(j-m >=0 && j-m <= k)
                         dp[i][j] = (dp[i][j] + dp[i-1][j-m])%M;
         return dp[n][k];
+    
     }
 };
