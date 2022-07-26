@@ -27,7 +27,7 @@ public:
             right = lowestCommonAncestor(root->right,p,q);
         }
         
-        if(left && right){
+        if(left !=NULL && right !=NULL){
             return root;
         }
         return left ==NULL?right:left;
