@@ -14,7 +14,7 @@ public:
         if(root->val ==p->val || root->val == q->val){
             return root;
         }
-        if(!root->left && !root->right){
+        if(root->left == NULL && root->right ==NULL){
             return NULL;
         }
         TreeNode * left =NULL;
