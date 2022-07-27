@@ -15,7 +15,7 @@ public:
         if(root == NULL) return ;
         TreeNode * temp= root;
         TreeNode * dummy = new TreeNode(0);
-        TreeNode * savedummy  = dummy;
+        // TreeNode * savedummy  = dummy;
         stack<TreeNode *>s;
         s.push(temp);
         while(!s.empty()){
