@@ -13,11 +13,11 @@ class Solution {
 public:
     void flatten(TreeNode* root) {
         if(root == NULL) return ;
-        TreeNode * temp= root;
+        //TreeNode * temp= root;
         TreeNode * dummy = new TreeNode(0);
         // TreeNode * savedummy  = dummy;
         stack<TreeNode *>s;
-        s.push(temp);
+        s.push(root);
         while(!s.empty()){
             TreeNode * x= s.top();
             s.pop();
