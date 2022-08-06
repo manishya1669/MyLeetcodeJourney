@@ -1,20 +1,21 @@
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-        map<int,int>m;
-        for(int i=0;i<nums1.size();i++)
-        {
-            m[nums1[i]]++;
+        
+        map<int,int>numap;
+        vector<int>v;
+        for(auto x:nums1){
+            numap[x]++;
         }
-        vector<int>ans;
-        for(int i=0;i<nums2.size();i++)
-        {
-            if(m[nums2[i]]!=0)
-            {
-                ans.push_back(nums2[i]);
-                m[nums2[i]]--;
+        
+        for(auto x:nums2){
+            
+            if(numap[x]){
+                v.push_back(x);
+                numap[x]--;
             }
-        } 
-        return ans;
+        }
+        return v;
+        
     }
 };
