@@ -4,29 +4,30 @@
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+https://assets.leetcode.com/uploads/2020/09/21/sum_tree_1.jpg *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
  *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
 class Solution {
 public:
-  
-    void inorder(TreeNode * root,unordered_map<int,int>&umap ,int k,int &count){
-        if(root==NULL)return;
-        inorder(root->left,umap,k,count);
-        if(umap.find(k-(root->val)) != umap.end()){
-            count=1;
+    bool find(TreeNode * root,int K ,unordered_map<int,int>&umap){
+        if(root==NULL)return false;
+        
+        if(umap.find(K-root->val)  != umap.end()){
+            return true;
+            
+        }else{
+            umap.insert({root->val,1});
         }
-        else umap[root->val]++;
-        inorder(root->right,umap,k,count);
+        
+       bool left= find(root->left,K,umap);
+       bool right = find(root->right,K,umap);
+        
+        return left || right;
     }
     bool findTarget(TreeNode* root, int k) {
-       
         unordered_map<int,int>umap;
-        int count =0;
-        inorder(root,umap,k,count);
-        
-        return count;
+        return find(root,k,umap);
     }
 };
