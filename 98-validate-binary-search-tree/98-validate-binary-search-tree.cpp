@@ -10,21 +10,22 @@
  * };
  */
 class Solution {
-public:
-    vector<TreeNode*>res;
-    void inorder(TreeNode * root){
-        if(root == NULL)return;
-        inorder(root->left);
-        res.push_back(root);
-        inorder(root->right);
-        
-        
+    void inorderT(TreeNode * root,vector<int>&v){
+        if(root==NULL)return ;
+       
+        inorderT(root->left,v);
+         v.push_back(root->val);
+         cout<<root->val<<endl;
+        inorderT(root->right,v);
     }
-    bool isValidBST(TreeNode* root) { 
-        if(root == NULL)return true;
-        inorder(root);
-        for(int i=1;i<res.size() ;i++){
-            if(res[i]->val<=res[i-1]->val)return false;
+public:
+    bool isValidBST(TreeNode* root) {
+       
+       if(root==NULL)return true;
+        vector<int>v;
+        inorderT(root,v);
+        for(int i =1;i<v.size();i++){
+            if(v[i]<=v[i-1])return false;
         }
         return true;
     }
