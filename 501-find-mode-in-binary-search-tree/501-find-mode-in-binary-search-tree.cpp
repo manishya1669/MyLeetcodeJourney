@@ -11,28 +11,28 @@
  */
 class Solution {
 public:
-    void traverse(TreeNode * root, unordered_map<int ,int>&umap){
-        if(root == NULL)return;
+    void inorder(TreeNode * root,unordered_map<int,int>&umap){
+        if(root==NULL)return;
+        inorder(root->left,umap);
         umap[root->val]++;
-        traverse(root->left,umap);
-        traverse(root->right,umap);
-        
+        inorder(root->right,umap);
     }
     vector<int> findMode(TreeNode* root) {
-        unordered_map<int,int>umap;
-        
+       unordered_map<int,int>umap;
         vector<int>v;
-        traverse(root,umap);
-        int maxi = INT_MIN;
-        for(auto &it:umap)maxi= max(maxi,it.second);
-        
-        for(auto &it:umap){
-            if(it.second==maxi)
-                v.push_back(it.first);
-                
-            
+        int maxi =INT_MIN;
+        inorder(root,umap);
+       
+        for(auto x:umap){
+            maxi = max(maxi,x.second);
         }
+        for(auto x:umap){
+            if(x.second ==maxi){
+                v.push_back(x.first);
+            }
+        }
+        return v;
         
-       return v;
+       
     }
 };
