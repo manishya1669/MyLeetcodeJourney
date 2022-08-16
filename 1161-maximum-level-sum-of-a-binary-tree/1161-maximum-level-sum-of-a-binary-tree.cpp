@@ -12,7 +12,7 @@
 class Solution {
 public:
     int maxLevelSum(TreeNode* root) {
-        map<int,int>m;
+        
         if(root==NULL)return 0;
         
         queue<TreeNode*>q;
@@ -30,7 +30,7 @@ public:
                 if(temp->left)q.push(temp->left);
                 if(temp->right)q.push(temp->right);
             }
-           // umap[count]=sum;
+          
             if(sum>maxi){
                 maxi = sum;
                 level= count;
