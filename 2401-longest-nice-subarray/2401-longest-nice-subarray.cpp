@@ -5,13 +5,13 @@ public:
          int maxi = INT_MIN;
          int count=0;
           int start =0;
-        int uni = 0;
+          int uni = 0;
          
           for(int i =0;i<n;i++){
               
               while((nums[i]&uni) !=0){
-                  int staringElement = nums[start];
-                  uni=uni^staringElement;
+                 
+                  uni = uni^nums[start];
                   start++;
               }
               uni=uni | nums[i];
