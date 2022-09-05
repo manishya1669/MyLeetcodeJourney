@@ -3,8 +3,8 @@ public:
     bool checkDistances(string s, vector<int>& distance) {
         int n= s.length();
         map<char,int>umap;
-       
-        for(int i =0;i<n;i++){
+        
+        for(int i =0;i<s.length();i++){
             if(umap[s[i]]==0){
                 umap[s[i]]=i+1;
             }else{
@@ -13,8 +13,9 @@ public:
                 }
             }
         }
+      
         return true;
-        
  
     }
 };
+  
