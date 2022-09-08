@@ -1,17 +1,19 @@
 class Solution {
 public:
-    void rev(vector<int>&v,int high,int low){
+    void rev(vector<int>&nums, int low,int high){
+        
         while(low<high){
-            swap(v[high],v[low]);
+            swap(nums[low],nums[high]);
             low++;
             high--;
         }
     }
     void rotate(vector<int>& nums, int k) {
+        
         int n = nums.size();
         k=k%n;
-        rev(nums,n-1-k,0);
-        rev(nums,n-1,n-k);
+        rev(nums,0,n-k-1);
+        rev(nums,n-k,n-1);
         reverse(nums.begin(),nums.end());
         
     }
