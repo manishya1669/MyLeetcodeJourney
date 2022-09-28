@@ -33,10 +33,10 @@ public:
         int ans = reverse(head);
          if(ans==n)
       {
-          ListNode *node=head;
-          head=head->next;
-          delete node;
-          return head;
+          // ListNode *node=head;
+          // head=head->next;
+          // delete node;
+          return head->next;
       }
         cout<<"ans:"<<ans<<endl;
         int x = ans-n;
